@@ -9,6 +9,7 @@ FILE="$1"
 # Sometimes the file extensions are incorrect
 if [ ${FILE: -8} == ".pdf.tsd" ]
 then
+	echo "renaming file .pdf.tsd => .pdf.p7m.tsd"
 	mv ${FILE} ${FILE/.pdf.tsd/.pdf.p7m.tsd}
 	FILE=${FILE/.pdf.tsd/.pdf.p7m.tsd}
 fi
